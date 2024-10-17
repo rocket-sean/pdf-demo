@@ -9,7 +9,7 @@ import UIKit
 import PDFKit
 
 
-class ViewController: UIViewController {
+class PDFReaderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
