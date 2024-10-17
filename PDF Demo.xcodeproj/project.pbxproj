@@ -11,6 +11,11 @@
 		DCC46BE52CC1257600037A1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC46BE02CC1257600037A1C /* LaunchScreen.storyboard */; };
 		DCC46BE62CC1257600037A1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC46BDC2CC1257600037A1C /* AppDelegate.swift */; };
 		DCC46BE72CC1257600037A1C /* PDFReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC46BE12CC1257600037A1C /* PDFReaderViewController.swift */; };
+		DCC46BEE2CC1265400037A1C /* thinkos.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DCC46BEB2CC1265400037A1C /* thinkos.pdf */; };
+		DCC46BEF2CC1265400037A1C /* thinkpython2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DCC46BEC2CC1265400037A1C /* thinkpython2.pdf */; };
+		DCC46BF02CC1265400037A1C /* thinkCScpp.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DCC46BE82CC1265400037A1C /* thinkCScpp.pdf */; };
+		DCC46BF12CC1265400037A1C /* thinkocaml.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DCC46BEA2CC1265400037A1C /* thinkocaml.pdf */; };
+		DCC46BF22CC1265400037A1C /* thinkjava2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DCC46BE92CC1265400037A1C /* thinkjava2.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		DCC46BDE2CC1257600037A1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCC46BDF2CC1257600037A1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCC46BE12CC1257600037A1C /* PDFReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFReaderViewController.swift; sourceTree = "<group>"; };
+		DCC46BE82CC1265400037A1C /* thinkCScpp.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = thinkCScpp.pdf; sourceTree = "<group>"; };
+		DCC46BE92CC1265400037A1C /* thinkjava2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = thinkjava2.pdf; sourceTree = "<group>"; };
+		DCC46BEA2CC1265400037A1C /* thinkocaml.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = thinkocaml.pdf; sourceTree = "<group>"; };
+		DCC46BEB2CC1265400037A1C /* thinkos.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = thinkos.pdf; sourceTree = "<group>"; };
+		DCC46BEC2CC1265400037A1C /* thinkpython2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = thinkpython2.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +46,7 @@
 		DCC46B622CC0FFFC00037A1C = {
 			isa = PBXGroup;
 			children = (
+				DCC46BED2CC1265400037A1C /* PDF Documents */,
 				DCC46BE22CC1257600037A1C /* PDF Demo */,
 				DCC46B6C2CC0FFFC00037A1C /* Products */,
 			);
@@ -59,6 +70,18 @@
 				DCC46BE02CC1257600037A1C /* LaunchScreen.storyboard */,
 			);
 			path = "PDF Demo";
+			sourceTree = "<group>";
+		};
+		DCC46BED2CC1265400037A1C /* PDF Documents */ = {
+			isa = PBXGroup;
+			children = (
+				DCC46BEC2CC1265400037A1C /* thinkpython2.pdf */,
+				DCC46BE92CC1265400037A1C /* thinkjava2.pdf */,
+				DCC46BE82CC1265400037A1C /* thinkCScpp.pdf */,
+				DCC46BEA2CC1265400037A1C /* thinkocaml.pdf */,
+				DCC46BEB2CC1265400037A1C /* thinkos.pdf */,
+			);
+			path = "PDF Documents";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +145,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC46BEE2CC1265400037A1C /* thinkos.pdf in Resources */,
+				DCC46BEF2CC1265400037A1C /* thinkpython2.pdf in Resources */,
+				DCC46BF02CC1265400037A1C /* thinkCScpp.pdf in Resources */,
+				DCC46BF12CC1265400037A1C /* thinkocaml.pdf in Resources */,
+				DCC46BF22CC1265400037A1C /* thinkjava2.pdf in Resources */,
 				DCC46BE32CC1257600037A1C /* Assets.xcassets in Resources */,
 				DCC46BE52CC1257600037A1C /* LaunchScreen.storyboard in Resources */,
 			);
