@@ -6,12 +6,23 @@
 //
 
 import UIKit
+import PDFKit
+
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        let pdfView = PDFView()
+        pdfView.backgroundColor = .white
+        
+        pdfView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(pdfView)
+        
+        pdfView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        pdfView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        pdfView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        pdfView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 }
