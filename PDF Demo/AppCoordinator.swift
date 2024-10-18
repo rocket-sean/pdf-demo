@@ -22,11 +22,21 @@ class AppCoordinator: Coordinator {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        navigationController.navigationBar.tintColor = UIColor.darkGray
     }
 
     
     func start() {
-        showDocumentReader(withDocumentNamed: "think-os")
+        showDocumentList()
+    }
+
+    
+    func showDocumentList() {
+        
+        let documentListViewController = DocumentListViewController()
+        documentListViewController.coordinator = self
+        
+        navigationController.pushViewController(documentListViewController, animated: true)
     }
 
     
