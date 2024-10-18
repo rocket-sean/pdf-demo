@@ -14,26 +14,19 @@ class DocumentReaderViewController: UIViewController {
     var coordinator: Coordinator?
 
     var documentId: Int?
-    private var pdfView: PDFView!
     
+    
+    var contentView: DocumentReaderView {
+        view as! DocumentReaderView
+    }
     
     override func loadView() {
         
-        view = UIView()
+        view = DocumentReaderView()
         
-        pdfView = PDFView()
-        pdfView.backgroundColor = .white
-        pdfView.autoScales = true
-        pdfView.translatesAutoresizingMaskIntoConstraints = false
-
-        view.addSubview(pdfView)
-        
-        NSLayoutConstraint.activate([
-            pdfView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            pdfView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            pdfView.topAnchor.constraint(equalTo: view.topAnchor),
-            pdfView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        contentView.pdfView.backgroundColor = .white
+        contentView.pdfView.autoScales = true
+        contentView.pdfView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     
@@ -44,13 +37,13 @@ class DocumentReaderViewController: UIViewController {
             self,
             selector: #selector(handlePDFViewPageChangedNotification(notification:)),
             name: Notification.Name.PDFViewPageChanged,
-            object: pdfView)
+            object: contentView.pdfView)
         
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(handlePDFViewSelectionChangedNotification(notification:)),
             name: Notification.Name.PDFViewSelectionChanged,
-            object: pdfView)
+            object: contentView.pdfView)
         
         guard let documentId = documentId,
               let document = DocumentStore.shared.documentForId(documentId) else {
@@ -58,7 +51,7 @@ class DocumentReaderViewController: UIViewController {
             return
         }
         
-        pdfView.document = loadPDFDocument(named: document.name)
+        contentView.pdfView.document = loadPDFDocument(named: document.name)
         title = document.title
     }
     
@@ -76,7 +69,7 @@ class DocumentReaderViewController: UIViewController {
     
     @objc private func handlePDFViewPageChangedNotification(notification: Notification) {
         
-        if let pageNumber = pdfView.document?.index(for: pdfView.currentPage!) {
+        if let pageNumber = contentView.pdfView.document?.index(for: contentView.pdfView.currentPage!) {
             print("PAGE: \(pageNumber)")
         }
     }
@@ -84,7 +77,7 @@ class DocumentReaderViewController: UIViewController {
     
     @objc private func handlePDFViewSelectionChangedNotification(notification: Notification) {
 
-        if let selectedText = pdfView.currentSelection?.string {
+        if let selectedText = contentView.pdfView.currentSelection?.string {
             print("SELECTION: \(selectedText)")
         }
     }
