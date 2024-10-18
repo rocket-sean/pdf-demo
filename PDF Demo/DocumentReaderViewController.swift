@@ -54,7 +54,7 @@ class DocumentReaderViewController: UIViewController {
         
         guard let documentId = documentId,
               let document = DocumentStore.shared.documentForId(documentId) else {
-            title = "Not Found"
+            title = "No Document"
             return
         }
         

@@ -39,7 +39,7 @@ class DocumentListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Documents"
+        title = DocumentStore.shared.documents.count > 0 ? "Documents" : "No Documents"
         
         tableView.reloadData()
     }
