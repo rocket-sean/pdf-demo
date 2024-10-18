@@ -179,6 +179,7 @@
 				DEVELOPMENT_TEAM = GLA82ZXCT5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PDF Demo/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PDF Reader";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -209,6 +210,7 @@
 				DEVELOPMENT_TEAM = GLA82ZXCT5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PDF Demo/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PDF Reader";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
