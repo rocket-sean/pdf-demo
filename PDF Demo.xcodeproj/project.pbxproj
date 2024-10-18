@@ -51,11 +51,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC0009C22CC2D7A700B5FC24 /* Document List */ = {
+			isa = PBXGroup;
+			children = (
+				DC4784C92CC279F50044ECBD /* DocumentListViewController.swift */,
+				DC0009BE2CC2C7F900B5FC24 /* DocumentListView.swift */,
+			);
+			path = "Document List";
+			sourceTree = "<group>";
+		};
+		DC0009C32CC2D7BA00B5FC24 /* Document Reader */ = {
+			isa = PBXGroup;
+			children = (
+				DCC46BE12CC1257600037A1C /* DocumentReaderViewController.swift */,
+				DC0009C02CC2D63600B5FC24 /* DocumentReaderView.swift */,
+			);
+			path = "Document Reader";
+			sourceTree = "<group>";
+		};
+		DC0009C42CC2D7CE00B5FC24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC4784C72CC279000044ECBD /* DocumentStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DCC46B622CC0FFFC00037A1C = {
 			isa = PBXGroup;
 			children = (
-				DC4784A52CC260870044ECBD /* Documents */,
 				DCC46BE22CC1257600037A1C /* PDF Demo */,
+				DC4784A52CC260870044ECBD /* Documents */,
 				DCC46B6C2CC0FFFC00037A1C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,11 +99,9 @@
 			children = (
 				DCC46BDC2CC1257600037A1C /* AppDelegate.swift */,
 				DCC46BF42CC24C8100037A1C /* AppCoordinator.swift */,
-				DC4784C92CC279F50044ECBD /* DocumentListViewController.swift */,
-				DC0009BE2CC2C7F900B5FC24 /* DocumentListView.swift */,
-				DCC46BE12CC1257600037A1C /* DocumentReaderViewController.swift */,
-				DC0009C02CC2D63600B5FC24 /* DocumentReaderView.swift */,
-				DC4784C72CC279000044ECBD /* DocumentStore.swift */,
+				DC0009C22CC2D7A700B5FC24 /* Document List */,
+				DC0009C32CC2D7BA00B5FC24 /* Document Reader */,
+				DC0009C42CC2D7CE00B5FC24 /* Model */,
 				DCC46BDE2CC1257600037A1C /* Info.plist */,
 				DCC46BDD2CC1257600037A1C /* Assets.xcassets */,
 				DCC46BE02CC1257600037A1C /* LaunchScreen.storyboard */,
