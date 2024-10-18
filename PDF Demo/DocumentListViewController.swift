@@ -27,12 +27,22 @@ class DocumentListViewController: UIViewController {
         title = DocumentStore.shared.documents.count > 0 ? "Documents" : "No Documents"
         
         navigationItem.backButtonTitle = ""
-
+        
         contentView.tableView.dataSource = self
         contentView.tableView.delegate = self
         contentView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         contentView.tableView.reloadData()
     }
+
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let selectionIndexPath = contentView.tableView.indexPathForSelectedRow {
+            contentView.tableView.deselectRow(at: selectionIndexPath, animated: animated)
+        }
+    }
+
 }
 
     
