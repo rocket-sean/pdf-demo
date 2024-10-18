@@ -12,14 +12,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var appCoordinator: AppCoordinator!
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        window = UIWindow()
-        let viewController = PDFReaderViewController()
+        let navigationController = UINavigationController()
         
-        window?.rootViewController = viewController
+        appCoordinator = AppCoordinator(navigationController: navigationController)
+        appCoordinator?.start()
+        
+        window = UIWindow()
+        window?.rootViewController = appCoordinator.navigationController
         window?.makeKeyAndVisible()
-
+        
         return true
     }
 }

@@ -16,6 +16,7 @@
 		DCC46BF02CC1265400037A1C /* thinkCScpp.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DCC46BE82CC1265400037A1C /* thinkCScpp.pdf */; };
 		DCC46BF12CC1265400037A1C /* thinkocaml.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DCC46BEA2CC1265400037A1C /* thinkocaml.pdf */; };
 		DCC46BF22CC1265400037A1C /* thinkjava2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DCC46BE92CC1265400037A1C /* thinkjava2.pdf */; };
+		DCC46BF52CC24C8100037A1C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC46BF42CC24C8100037A1C /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DCC46BEA2CC1265400037A1C /* thinkocaml.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = thinkocaml.pdf; sourceTree = "<group>"; };
 		DCC46BEB2CC1265400037A1C /* thinkos.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = thinkos.pdf; sourceTree = "<group>"; };
 		DCC46BEC2CC1265400037A1C /* thinkpython2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = thinkpython2.pdf; sourceTree = "<group>"; };
+		DCC46BF42CC24C8100037A1C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				DCC46BDC2CC1257600037A1C /* AppDelegate.swift */,
+				DCC46BF42CC24C8100037A1C /* AppCoordinator.swift */,
 				DCC46BE12CC1257600037A1C /* PDFReaderViewController.swift */,
 				DCC46BDE2CC1257600037A1C /* Info.plist */,
 				DCC46BDD2CC1257600037A1C /* Assets.xcassets */,
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC46BF52CC24C8100037A1C /* AppCoordinator.swift in Sources */,
 				DCC46BE62CC1257600037A1C /* AppDelegate.swift in Sources */,
 				DCC46BE72CC1257600037A1C /* PDFReaderViewController.swift in Sources */,
 			);

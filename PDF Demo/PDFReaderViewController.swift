@@ -12,7 +12,7 @@ import PDFKit
 class PDFReaderViewController: UIViewController {
     
     var pdfView: PDFView!
-    
+    var documentName: String!
     
     override var prefersStatusBarHidden: Bool {
         true
@@ -54,7 +54,8 @@ class PDFReaderViewController: UIViewController {
             name: Notification.Name.PDFViewSelectionChanged,
             object: pdfView)
         
-        pdfView.document = loadDocument(named: "thinkos")
+        pdfView.document = loadDocument(named: documentName)
+        title = documentName + ".pdf"
     }
     
     
