@@ -11,28 +11,13 @@ class DocumentListViewController: UIViewController {
     
     var coordinator: AppCoordinator?
     
-    var tableView: UITableView!
+    var contentView: DocumentListView {
+        view as! DocumentListView
+    }
     
     
     override func loadView() {
-        
-        view = UIView()
-        
-        tableView = UITableView()
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.addSubview(tableView)
-        
-        NSLayoutConstraint.activate([
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        view = DocumentListView()
     }
     
     
@@ -43,7 +28,10 @@ class DocumentListViewController: UIViewController {
         
         navigationItem.backButtonTitle = ""
 
-        tableView.reloadData()
+        contentView.tableView.dataSource = self
+        contentView.tableView.delegate = self
+        contentView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        contentView.tableView.reloadData()
     }
 }
 

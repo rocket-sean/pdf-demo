@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0009BF2CC2C7F900B5FC24 /* DocumentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0009BE2CC2C7F900B5FC24 /* DocumentListView.swift */; };
 		DC4784C82CC279000044ECBD /* DocumentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4784C72CC279000044ECBD /* DocumentStore.swift */; };
 		DC4784CA2CC279F50044ECBD /* DocumentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4784C92CC279F50044ECBD /* DocumentListViewController.swift */; };
 		DCC46BE32CC1257600037A1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC46BDD2CC1257600037A1C /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC0009BE2CC2C7F900B5FC24 /* DocumentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentListView.swift; sourceTree = "<group>"; };
 		DC4784C72CC279000044ECBD /* DocumentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentStore.swift; sourceTree = "<group>"; };
 		DC4784C92CC279F50044ECBD /* DocumentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentListViewController.swift; sourceTree = "<group>"; };
 		DCC46B6B2CC0FFFC00037A1C /* PDF Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +72,7 @@
 				DCC46BDC2CC1257600037A1C /* AppDelegate.swift */,
 				DCC46BF42CC24C8100037A1C /* AppCoordinator.swift */,
 				DC4784C92CC279F50044ECBD /* DocumentListViewController.swift */,
+				DC0009BE2CC2C7F900B5FC24 /* DocumentListView.swift */,
 				DCC46BE12CC1257600037A1C /* DocumentReaderViewController.swift */,
 				DC4784C72CC279000044ECBD /* DocumentStore.swift */,
 				DCC46BDE2CC1257600037A1C /* Info.plist */,
@@ -158,6 +161,7 @@
 				DC4784C82CC279000044ECBD /* DocumentStore.swift in Sources */,
 				DCC46BF52CC24C8100037A1C /* AppCoordinator.swift in Sources */,
 				DC4784CA2CC279F50044ECBD /* DocumentListViewController.swift in Sources */,
+				DC0009BF2CC2C7F900B5FC24 /* DocumentListView.swift in Sources */,
 				DCC46BE62CC1257600037A1C /* AppDelegate.swift in Sources */,
 				DCC46BE72CC1257600037A1C /* DocumentReaderViewController.swift in Sources */,
 			);
