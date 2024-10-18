@@ -69,8 +69,8 @@
 			children = (
 				DCC46BDC2CC1257600037A1C /* AppDelegate.swift */,
 				DCC46BF42CC24C8100037A1C /* AppCoordinator.swift */,
-				DCC46BE12CC1257600037A1C /* DocumentReaderViewController.swift */,
 				DC4784C92CC279F50044ECBD /* DocumentListViewController.swift */,
+				DCC46BE12CC1257600037A1C /* DocumentReaderViewController.swift */,
 				DC4784C72CC279000044ECBD /* DocumentStore.swift */,
 				DCC46BDE2CC1257600037A1C /* Info.plist */,
 				DCC46BDD2CC1257600037A1C /* Assets.xcassets */,
