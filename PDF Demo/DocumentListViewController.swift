@@ -13,7 +13,7 @@ class DocumentListViewController: UIViewController {
     
     var tableView: UITableView!
     
-
+    
     override func loadView() {
         
         view = UIView()
@@ -24,7 +24,7 @@ class DocumentListViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
@@ -43,29 +43,9 @@ class DocumentListViewController: UIViewController {
         
         tableView.reloadData()
     }
-    
-    
-    func loadDocuments() -> [Document]? {
-        
-        guard let url = Bundle.main.url(forResource: "documents", withExtension: "json") else {
-            return nil
-        }
-        
-        do {
-            let data = try Data(contentsOf: url)
-            let decoder = JSONDecoder()
-            let jsonData = try decoder.decode(Documents.self, from: data)
-
-            return jsonData.documents
-        } catch {
-            print(error)
-            
-            return nil
-        }
-    }
 }
 
-
+    
 extension DocumentListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
