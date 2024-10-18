@@ -13,7 +13,7 @@ class DocumentReaderViewController: UIViewController {
     
     var coordinator: Coordinator?
 
-    var documentName: String?
+    var documentId: Int?
     private var documentView: PDFView!
     
     
@@ -52,14 +52,14 @@ class DocumentReaderViewController: UIViewController {
             name: Notification.Name.PDFViewSelectionChanged,
             object: documentView)
         
-        guard let documentName = documentName else {
-            title = "Document Not Found"
+        guard let documentId = documentId,
+              let document = DocumentStore.shared.documentForId(documentId) else {
+            title = "Not Found"
             return
         }
-
-        documentView.document = loadDocument(named: documentName)
-        title = documentName + ".pdf"
-
+        
+        documentView.document = loadDocument(named: document.name)
+        title = document.name + ".pdf"
     }
     
     

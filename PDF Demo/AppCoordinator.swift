@@ -40,12 +40,12 @@ class AppCoordinator: Coordinator {
     }
 
     
-    func showDocumentReader(withDocumentNamed documentName: String) {
+    func showDocumentReader(withDocumentId documentId: Int) {
         
         let documentReaderViewController = DocumentReaderViewController()
         documentReaderViewController.coordinator = self
         
-        documentReaderViewController.documentName = documentName
+        documentReaderViewController.documentId = documentId
         
         navigationController.pushViewController(documentReaderViewController, animated: true)
     }

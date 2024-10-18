@@ -91,6 +91,7 @@ extension DocumentListViewController: UITableViewDelegate {
     func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let document = DocumentStore.shared.documents[indexPath.row]        
-        coordinator?.showDocumentReader(withDocumentNamed: document.name)
+        
+        coordinator?.showDocumentReader(withDocumentId: document.id)
     }
 }
