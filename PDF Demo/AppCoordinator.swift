@@ -26,7 +26,7 @@ class AppCoordinator: Coordinator {
 
     
     func start() {
-        showPDFReader(withDocumentNamed: "thinkos")
+        showPDFReader(withDocumentNamed: "think-os")
     }
 
     
