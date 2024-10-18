@@ -60,8 +60,6 @@ class DocumentReaderViewController: UIViewController {
         
         pdfView.document = loadPDFDocument(named: document.name)
         title = document.title
-        
-        navigationItem.backButtonTitle = ""
     }
     
     

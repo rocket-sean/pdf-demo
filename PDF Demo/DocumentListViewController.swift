@@ -41,6 +41,8 @@ class DocumentListViewController: UIViewController {
         
         title = DocumentStore.shared.documents.count > 0 ? "Documents" : "No Documents"
         
+        navigationItem.backButtonTitle = ""
+
         tableView.reloadData()
     }
 }
