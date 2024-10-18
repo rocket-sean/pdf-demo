@@ -33,6 +33,8 @@ class AppCoordinator: Coordinator {
     func showDocumentReader(withDocumentNamed documentName: String) {
         
         let documentReaderViewController = DocumentReaderViewController()
+        documentReaderViewController.coordinator = self
+        
         documentReaderViewController.documentName = documentName
         
         navigationController.pushViewController(documentReaderViewController, animated: true)

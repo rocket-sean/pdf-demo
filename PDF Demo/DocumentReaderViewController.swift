@@ -11,8 +11,9 @@ import PDFKit
 
 class DocumentReaderViewController: UIViewController {
     
-    var documentName: String!
-    
+    var coordinator: Coordinator?
+
+    var documentName: String?
     private var documentView: PDFView!
     
     
@@ -51,15 +52,21 @@ class DocumentReaderViewController: UIViewController {
             name: Notification.Name.PDFViewSelectionChanged,
             object: documentView)
         
+        guard let documentName = documentName else {
+            title = "Document Not Found"
+            return
+        }
+
         documentView.document = loadDocument(named: documentName)
         title = documentName + ".pdf"
+
     }
     
     
     private func loadDocument(named name: String) -> PDFDocument? {
         
-        guard let path = Bundle.main.url(forResource: name, withExtension: "pdf"),
-              let document = PDFDocument(url: path) else {
+        guard let url = Bundle.main.url(forResource: name, withExtension: "pdf"),
+              let document = PDFDocument(url: url) else {
             return nil
         }
         
