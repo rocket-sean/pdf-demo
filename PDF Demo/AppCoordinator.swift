@@ -26,15 +26,15 @@ class AppCoordinator: Coordinator {
 
     
     func start() {
-        showPDFReader(withDocumentNamed: "think-os")
+        showDocumentReader(withDocumentNamed: "think-os")
     }
 
     
-    func showPDFReader(withDocumentNamed documentName: String) {
+    func showDocumentReader(withDocumentNamed documentName: String) {
         
-        let pdfReaderViewController = PDFReaderViewController()
-        pdfReaderViewController.documentName = documentName
+        let documentReaderViewController = DocumentReaderViewController()
+        documentReaderViewController.documentName = documentName
         
-        navigationController.pushViewController(pdfReaderViewController, animated: true)
+        navigationController.pushViewController(documentReaderViewController, animated: true)
     }
 }

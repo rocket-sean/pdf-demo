@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DocumentReaderViewController.swift
 //  PDF Demo
 //
 //  Created by Sean Buttinger (Rocket Apes) on 17.10.24.
@@ -9,32 +9,29 @@ import UIKit
 import PDFKit
 
 
-class PDFReaderViewController: UIViewController {
+class DocumentReaderViewController: UIViewController {
     
-    var pdfView: PDFView!
     var documentName: String!
     
-    override var prefersStatusBarHidden: Bool {
-        true
-    }
+    private var documentView: PDFView!
     
     
     override func loadView() {
         
         view = UIView()
         
-        pdfView = PDFView()
-        pdfView.backgroundColor = .white
-        pdfView.autoScales = true
-        pdfView.translatesAutoresizingMaskIntoConstraints = false
+        documentView = PDFView()
+        documentView.backgroundColor = .white
+        documentView.autoScales = true
+        documentView.translatesAutoresizingMaskIntoConstraints = false
 
-        view.addSubview(pdfView)
+        view.addSubview(documentView)
         
         NSLayoutConstraint.activate([
-            pdfView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            pdfView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            pdfView.topAnchor.constraint(equalTo: view.topAnchor),
-            pdfView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            documentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            documentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            documentView.topAnchor.constraint(equalTo: view.topAnchor),
+            documentView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
     
@@ -46,15 +43,15 @@ class PDFReaderViewController: UIViewController {
             self,
             selector: #selector(handlePDFViewPageChangedNotification(notification:)),
             name: Notification.Name.PDFViewPageChanged,
-            object: pdfView)
+            object: documentView)
         
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(handlePDFViewSelectionChangedNotification(notification:)),
             name: Notification.Name.PDFViewSelectionChanged,
-            object: pdfView)
+            object: documentView)
         
-        pdfView.document = loadDocument(named: documentName)
+        documentView.document = loadDocument(named: documentName)
         title = documentName + ".pdf"
     }
     
@@ -72,7 +69,7 @@ class PDFReaderViewController: UIViewController {
     
     @objc private func handlePDFViewPageChangedNotification(notification: Notification) {
         
-        if let pageNumber = pdfView.document?.index(for: pdfView.currentPage!) {
+        if let pageNumber = documentView.document?.index(for: documentView.currentPage!) {
             print("PAGE: \(pageNumber)")
         }
     }
@@ -80,7 +77,7 @@ class PDFReaderViewController: UIViewController {
     
     @objc private func handlePDFViewSelectionChangedNotification(notification: Notification) {
 
-        if let selectedText = pdfView.currentSelection?.string {
+        if let selectedText = documentView.currentSelection?.string {
             print("SELECTION: \(selectedText)")
         }
     }
