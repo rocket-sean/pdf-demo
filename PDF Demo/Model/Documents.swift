@@ -10,20 +10,25 @@ import Foundation
 
 struct Document: Decodable {
     
-    public var id: Int
-    public var name: String
-    public var title: String
+    let id: Int
+    let name: String
+    let title: String
 }
 
 
 struct Documents: Decodable {
     
-    public var documents: [Document]
+    private let documents: [Document]
      
     
-    static let all: [Document] = loadDocuments(fromFileNamed: "documents") ?? []
+    static let all: [Document] = Documents().documents
 
     static var count: Int { all.count }
+    
+    
+    private init() {
+        documents = Self.loadDocuments(fromFileNamed: "documents") ?? []
+    }
     
     
     static func documentForId(_ id: Int) -> Document? {
@@ -40,7 +45,7 @@ struct Documents: Decodable {
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            let jsonData = try decoder.decode(Documents.self, from: data)
+            let jsonData = try decoder.decode(Self.self, from: data)
 
             return jsonData.documents
         } catch {

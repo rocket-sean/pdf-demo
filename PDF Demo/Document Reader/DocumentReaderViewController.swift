@@ -16,7 +16,7 @@ class DocumentReaderViewController: UIViewController {
     var documentId: Int?
     
     
-    var contentView: DocumentReaderView {
+    private var contentView: DocumentReaderView {
         view as! DocumentReaderView
     }
     

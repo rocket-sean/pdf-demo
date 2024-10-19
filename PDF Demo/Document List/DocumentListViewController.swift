@@ -11,7 +11,7 @@ class DocumentListViewController: UIViewController {
     
     var coordinator: AppCoordinator?
     
-    var contentView: DocumentListView {
+    private var contentView: DocumentListView {
         view as! DocumentListView
     }
     
