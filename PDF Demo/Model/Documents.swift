@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Document: Decodable, Hashable {
+struct Document: Decodable {
     
     public var id: Int
     public var name: String
