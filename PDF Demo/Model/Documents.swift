@@ -1,17 +1,11 @@
 //
-//  DocumentStore.swift
+//  Documents.swift
 //  PDF Demo
 //
 //  Created by Sean Buttinger (Rocket Apes) on 18.10.24.
 //
 
 import Foundation
-
-
-struct Documents: Decodable {
-    
-    public var documents: [Document]
-}
 
 
 struct Document: Decodable, Hashable {
@@ -22,24 +16,22 @@ struct Document: Decodable, Hashable {
 }
 
 
-class DocumentStore {
-
-    static let shared = DocumentStore()
-
-    private(set) var documents: [Document] = []
-
+struct Documents: Decodable {
     
-    func documentForId(_ id: Int) -> Document? {
-        return documents.first(where: { $0.id == id })
+    public var documents: [Document]
+     
+    
+    static let all: [Document] = loadDocuments(fromFileNamed: "documents") ?? []
+
+    static var count: Int { all.count }
+    
+    
+    static func documentForId(_ id: Int) -> Document? {
+        return all.first(where: { $0.id == id })
     }
-
     
-    private init() {
-        documents = self.loadDocuments(fromFileNamed: "documents") ?? []
-    }
-
     
-    private func loadDocuments(fromFileNamed filename: String) -> [Document]? {
+    private static func loadDocuments(fromFileNamed filename: String) -> [Document]? {
         
         guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
             return nil
@@ -58,5 +50,3 @@ class DocumentStore {
         }
     }
 }
-
-

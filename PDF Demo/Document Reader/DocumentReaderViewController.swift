@@ -46,7 +46,7 @@ class DocumentReaderViewController: UIViewController {
             object: contentView.pdfView)
         
         guard let documentId = documentId,
-              let document = DocumentStore.shared.documentForId(documentId) else {
+              let document = Documents.documentForId(documentId) else {
             title = "No Document"
             return
         }
